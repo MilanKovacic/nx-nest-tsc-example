@@ -9,6 +9,11 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app/app.module';
 import { BackendLibraryModule } from '@backend/library';
 
+/**
+ * Bootstraps the NestJS application
+ * @returns {Promise<void>} A promise that resolves when the application is successfully started
+ * @throws {Error} If there's an error during the application startup
+ */
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const globalPrefix = 'api';
